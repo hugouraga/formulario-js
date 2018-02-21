@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="device=width-device, initial-scale= 1.0">	
+	<meta name="description" content="fórmulario interativo">
+	<meta name="author" content ="Hugo Issao Uraga">
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script
+	  src="http://code.jquery.com/jquery-2.2.4.min.js"
+  	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous">
+    </script>
+    <link href = "https://fonts.googleapis.com/css?family= Raleway " rel = "stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
+	<title>Formulario </title>
+
+</head>
+<body>
+	<div class="container-formulario">
+		<form action="">
+			<h2 id="contate-me">Contate-me</h2>
+			<div class="form-group">
+				<label for="nome"><h4>Nome</h4></label>
+				<input type="text" name="nome" id="entradaNome" required placeholder="Primeiro nome" autofocus> 
+			</div>
+			<div class="form-group">
+				<label for="sobrenome"><h4>Sobrenome</h4></label>
+				<input type="text" name="sobrenome" id="entradaSobrenome" required placeholder="Sobrenome">
+			</div>
+			<div class="form-group">
+				<label for="email"><h4>Email</h4></label>
+				<input type="email" name="email" id="entradaEmail" required placeholder="email">
+			</div> 
+			<input type="submit" id="enviarFormulario" value="enviar"></input>
+		</form>
+	</div>
+
+	<section class="container-table">
+		<div class="table-elemento">
+			<table class="table">
+				<tr>
+					<th>Nome</th>
+					<th>Sobrenome</th>
+					<th>Email</th>
+				</tr>
+			</table>
+		</div>
+	</section>
+	<!--Validação do formulário-->
+	<script>
+		$("#enviarFormulario").click(function(event){
+			event.preventDefault();
+			
+			nome = $("#entradaNome").val();
+			sobreNome = $("#entradaSobrenome").val();
+			email = $("#entradaEmail").val();
+			contador = 0
+			if (nome == ""){
+				contador += 1;
+			}
+			if (sobreNome == ""){
+				contador += 1;
+			}
+			if (email == ""){
+				contador += 1;
+			}
+			if (contador == 0){
+				console.log(nome);
+				var trInicio = "<tr>";
+				var td01 = "<td>" + nome + "</td>";
+				var td02 = "<td>" + sobreNome + "</td>";
+				var td03 = "<td>" + email + "</td>";
+				var trFim = "</tr>";
+
+				$(".table").append(trInicio + td01 + td02 + td03 + trFim);
+
+    		    $("#entradaNome").val("");
+			    $("#entradaSobrenome").val("");
+			    $("#entradaEmail").val("");
+				
+		    } else{
+		    	alert("Preenchimento inválido!")	
+		    };
+
+		});
+	</script>
+</body>
+</html>

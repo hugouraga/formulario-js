@@ -1,0 +1,107 @@
+/*
+------  SUMÁRIO ------
+
+Você encontrará nesses indices o estilo dos elementos correspondentes.
+
+1- resetando valores css
+2- configurando estilo do formulário
+	2.1 - responsividade formulário
+		- mobile(tablet)
+		- mobile(celular)
+3- configurando estilo da tabela
+
+*/
+
+/*1- resetando valores css*/
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #003B36;
+}
+html{ 
+} /*1- fim*/
+
+/*2- configurando estilos do formulário*/
+
+.container-formulario{
+	position: relative;
+	margin: auto;
+	max-width: 300px;
+	background-color: #002429;
+	padding: 20px 20px 80px 20px;
+	margin-top: 5%;
+	border-radius: 3px;
+	box-shadow: 0px 0px 10px 5px rgba(0,0,0,.3);
+
+}
+.container-formulario #contate-me{
+	color: white;
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-align: center;
+	font-size: 40px;
+}
+.container-formulario .form-group{
+	position: relative;
+	width: 100%;
+}
+.container-formulario .form-group input, label{
+	margin: auto;
+	margin-bottom: 25px;
+	position: relative;
+	width: 100%;
+	border-radius: 3px;
+	border: 0px none;
+	height: 25px;
+}
+.container-formulario .form-group h4{
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: 'Poppins', sans-serif;
+	font-size: 13px;
+	
+}
+.container-formulario #enviarFormulario{
+	position: relative;
+	display: inline-block;
+	margin-left: 25%;
+	margin-top: 20px;
+	width: 150px;
+	padding: 5px 25px 5px 25px;
+	text-align: center; 
+	border-radius: 2px;
+	background-color:  #009C4C;
+	color: #CDC8DE;
+	font-size: 20px;
+  	text-decoration: none;
+  	font-family: 'Poppins', sans-serif;
+}
+/*2- fim*/
+
+
+/*3- configurando estilo da tabela*/
+
+.container-table{
+	max-width: 800px;
+	margin: auto;
+	margin-bottom: 200px;
+	position: relative;
+	background-color: rgba(0,0,0,.6);
+}
+table, tr, th, td{
+	border: 1px solid white;
+	border-collapse: collapse;
+	color: white;
+}
+.container-table .table-elemento .table{
+	width: 100%;
+	margin-top: 20px;
+}
+.container-table .table-elemento .table tr{
+	width: 33.3%;
+}
+
+.container-table .table-elemento .table tr td{
+	width: 33.3%;
+	text-align: center;
+}
